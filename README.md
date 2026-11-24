@@ -30,7 +30,7 @@
 ### **Smart Inventory Management System**
 *An Enterprise-Grade, Microservices-Based Inventory, Alerting, and Analytics System with Production Kubernetes Orchestration, Ansible Automation, and Jenkins CI/CD Delivery.*
 
-* **Repository**: [https://github.com/Moha-sys/smart-inventory](https://github.com/Moha-sys/smart-inventory)
+* **Repository**: [https://github.com/DEPI764/SmartInventoryManagementSystem](https://github.com/DEPI764/SmartInventoryManagementSystem)
 * **Docker Hub Registry**: [https://hub.docker.com/u/mohadevv](https://hub.docker.com/u/mohadevv)
 * **Jenkins Pipeline URL**: [http://localhost:8080/job/smart-inventory/](http://localhost:8080/job/smart-inventory/)
 * **Live Web Application**: [http://localhost:8081](http://localhost:8081) *(Docker Compose)* \| [http://localhost:30080](http://localhost:30080) *(Kubernetes NodePort)*
@@ -140,13 +140,13 @@ flowchart TD
 
 ## 3. Team Members
 
-| # | Member Name | Role & Specialization | Profiles / Contact |
+| # | Member Name | Role & Specialization | Profiles |
 | :-: | :--- | :--- | :--- |
-| **1** | **Mohamed Ashraf Farouk Kharoub** | **Lead DevOps Engineer & Cloud Architect** | [GitHub: @Moha-sys](https://github.com/Moha-sys) <br> [Docker Hub: @mohadevv](https://hub.docker.com/u/mohadevv) <br> `mafkh05@gmail.com` |
-| **2** | **Youssef Amr** | **Kubernetes & Cloud Infrastructure Engineer** | Team Member (DEPI DevOps Track) |
-| **3** | **Hassan Tamer** | **CI/CD Pipeline & Automation Engineer** | Team Member (DEPI DevOps Track) |
-| **4** | **Youssef Islam** | **Backend Services & Database Specialist** | Team Member (DEPI DevOps Track) |
-| **5** | **Kareem Islam** | **Frontend Engineer & QA / Observability Specialist** | Team Member (DEPI DevOps Track) |
+| **1** | **Youssef Amr Abdelmoneim Ahmed** | **DevOps Team Leader,Frontend Engineer & Docker Containerization Specialist** | Team Member (DEPI DevOps Track) |
+| **2** | **Youssef Islam Farid Ramadan** | **Backend Services & Cloud Infrastructure** | Team Member (DEPI DevOps Track) |
+| **3** | **Mohamed Ashraf Farouk Kharoub** | **CI/CD Pipeline & Kubernetes Engineer** | Team Member (DEPI DevOps Track) |
+| **4** | **Hassan Tamer Hassan Mohamed** | **Database Specialist & Cloud Architect** | Team Member (DEPI DevOps Track) |
+| **5** | **Kareem Islam Yaqout Mohamed** | **Automation Engineer & QA / Observability Specialist** | Team Member (DEPI DevOps Track) |
 
 > **Note for DEPI Evaluation**: This project was developed as a cohesive 5-member engineering team effort with clearly demarcated roles covering the complete cloud-native lifecycle.
 
@@ -205,21 +205,22 @@ flowchart TD
 
 ### RACI Matrix (5 Team Members)
 
-| Task / Deliverable | Mohamed Ashraf (Lead Architect) | Youssef Amr (K8s & Infra) | Hassan Tamer (CI/CD & Ansible) | Youssef Islam (Backend & DB) | Kareem Islam (Frontend & QA) |
+| Task / Deliverable | Youssef Amr (Team Leader, Frontend & Docker) | Youssef Islam (Backend & Cloud Infra) | Mohamed Ashraf (CI/CD & K8s) | Hassan Tamer (Database & Cloud Architect) | Kareem Islam (Automation & QA) |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **System Architecture & Cloud Topology Design** | **A / R** | C | C | C | C |
-| **Dockerfile Engineering & Multi-Stage Optimization** | **A** | C | R | R | R |
-| **Docker Compose Multi-Container Orchestration** | **A** | C | C | R | R |
-| **Kubernetes Manifests (Deployments & Replicas)** | **A** | **R** | C | I | I |
-| **Persistent Storage (HostPath PV & 2Gi PVC)** | **A** | **R** | I | C | I |
-| **Cluster Networking (ClusterIP, NodePort, Ingress)** | **A** | **R** | C | I | I |
-| **Configuration & Secrets (ConfigMap & Secret YAML)** | **A** | **R** | C | C | I |
-| **Ansible Playbooks (`setup-environment` & `deploy-k8s`)** | **A** | C | **R** | I | I |
-| **Jenkins Declarative CI/CD Pipeline (`Jenkinsfile`)** | **A** | I | **R** | I | I |
-| **Backend REST API & PostgreSQL Pooling** | **A** | I | I | **R** | C |
-| **Event-Driven Alert Poller & Webhook Worker** | **A** | I | I | **R** | I |
-| **React SPA Dashboard, Multi-Language & Themes** | **A** | I | I | I | **R** |
-| **Health Probes, Prometheus Metrics & Load Testing** | **A** | C | C | C | **R** |
+| **System Architecture & Cloud Topology Design** | **A** | C | C | **R** | C |
+| **Dockerfile Engineering & Multi-Stage Optimization** | **A / R** | C | C | I | I |
+| **Docker Compose Multi-Container Orchestration** | **A / R** | C | I | C | I |
+| **Kubernetes Manifests (Deployments & Replicas)** | **A** | C | **R** | C | I |
+| **Persistent Storage (HostPath PV & 2Gi PVC)** | **A** | I | C | **R** | I |
+| **Cluster Networking (ClusterIP, NodePort, Ingress)** | **A** | C | **R** | C | I |
+| **Configuration & Secrets (ConfigMap & Secret YAML)** | **A** | C | **R** | C | I |
+| **Ansible Playbooks (`setup-environment` & `deploy-k8s`)** | **A** | I | C | I | **R** |
+| **Jenkins Declarative CI/CD Pipeline (`Jenkinsfile`)** | **A** | I | **R** | I | C |
+| **Backend REST API (`inventory-service`)** | **A** | **R** | I | C | C |
+| **PostgreSQL Schema, Connection Pooling & Constraints** | **A** | C | I | **R** | I |
+| **Event-Driven Alert Poller & Webhook Worker** | **A** | **R** | I | C | C |
+| **React SPA Dashboard, Multi-Language & Themes** | **A / R** | I | I | I | C |
+| **Health Probes, Prometheus Metrics & Load Testing** | **A** | C | C | I | **R** |
 | **DEPI Documentation, Diagrams & Defense Presentation** | **A / R** | C | C | C | C |
 
 *(Legend: **R** = Responsible [does the work], **A** = Accountable [approves / owns outcome], **C** = Consulted [provides input], **I** = Informed [kept updated])*
@@ -228,30 +229,34 @@ flowchart TD
 
 ### Detailed Domain Responsibilities
 
-1. **Mohamed Ashraf Farouk Kharoub — Lead DevOps Engineer & Cloud Architect**:
-   * Overall technical governance, repository management, and high-level architectural design.
-   * End-to-end integration between GitHub, Docker Hub (`mohadevv`), Jenkins, Ansible, and Kubernetes.
-   * Cluster stability, master node tolerations, reboot resilience, and technical defense presentation.
+1. **Youssef Amr Abdelmoneim — DevOps Team Leader, Frontend Engineer & Docker Containerization Specialist**:
+   * Overall technical leadership, task coordination, and team delivery governance.
+   * Authors the multi-stage Dockerfiles (`client`, `server`, `worker`) and the `docker-compose.yml` stacks, including non-root hardening and image size optimization.
+   * Builds and refines the React 18 SPA with Vite, Tailwind CSS, dark/light themes, and Arabic RTL support.
+   * Configures the Nginx reverse proxy inside the client container (`/api/inventory/` and `/api/alerts/`).
+   * Owns project documentation, architecture diagrams, and the final defense presentation.
 
-2. **Youssef Amr — Kubernetes & Cloud Infrastructure Engineer**:
-   * Authors declarative Kubernetes manifests in `k8s/` (`client-deployment`, `server-deployment`, `worker-deployment`, `postgres-deployment`).
-   * Configures persistent storage (`database-persistent-volume` and `database-persistent-volume-claim`).
-   * Establishes internal ClusterIP services, NodePort (`30080`), and NGINX Ingress rules.
+2. **Youssef Islam Farid Ramadan — Backend Services & Cloud Infrastructure**:
+   * Maintains the `inventory-service` Node.js REST API (`/items`, `/reports`, `/health`, `/metrics`).
+   * Implements the background `alert-service` poller for low-stock threshold detection, alert auto-resolution, and webhook dispatch.
+   * Supports the cloud infrastructure layer by defining service environment variables, ports, and inter-service communication for the cluster.
 
-3. **Hassan Tamer — CI/CD Pipeline & Automation Engineer**:
-   * Architects declarative 5-stage `Jenkinsfile` with automated build, test, push, and deploy stages.
-   * Develops and maintains Ansible playbooks (`setup-environment.yml` and `deploy-k8s.yml`).
-   * Configures Jenkins credentials (`docker`), Docker Hub registry publishing, and Ansible runner execution.
+3. **Mohamed Ashraf Farouk Kharoub — CI/CD Pipeline & Kubernetes Engineer**:
+   * Authors the declarative Kubernetes manifests in `k8s/` (`client-deployment`, `server-deployment`, `worker-deployment`, `postgres-deployment`).
+   * Establishes internal ClusterIP services, the NodePort (`30080`), and NGINX Ingress rules.
+   * Manages the `ConfigMap` and `Secret` resources for application configuration and credentials.
+   * Architects the declarative 5-stage `Jenkinsfile` (build, test, push, deploy) with GitHub webhook integration.
+   * Configures Jenkins credentials (`docker`) and Docker Hub (`mohadevv`) publishing, and ensures cluster stability and reboot resilience.
 
-4. **Youssef Islam — Backend Services & Database Specialist**:
-   * Maintains `inventory-service` Node.js REST API (`/items`, `/reports`, `/health`, `/metrics`).
-   * Manages PostgreSQL database schema, connection pooling (`pg`), and SKU constraint enforcement.
-   * Implements background `alert-service` poller for low-stock threshold detection and webhook alerts.
+4. **Hassan Tamer Hassan Mohamed — Database Specialist & Cloud Architect**:
+   * Designs the overall cloud-native architecture and microservices topology.
+   * Manages the PostgreSQL 16 database: schema design, connection pooling (`pg`), SKU uniqueness, and check constraints (`quantity >= 0`).
+   * Configures persistent storage (`database-persistent-volume` and `database-persistent-volume-claim`) to guarantee data durability across pod restarts and host reboots.
 
-5. **Kareem Islam — Frontend Engineer & QA / Observability Specialist**:
-   * Builds and refines React 18 SPA client with Vite, Tailwind CSS, dark/light themes, and Arabic RTL support.
-   * Configures Nginx reverse proxy routing inside the client container (`/api/inventory/` and `/api/alerts/`).
-   * Implements Prometheus metrics collection (`prom-client`), HTTP health probes, and verification scripts (`scripts/demo-status.sh`).
+5. **Kareem Islam Yaqout Mohamed — Automation Engineer & QA / Observability Specialist**:
+   * Develops and maintains the Ansible playbooks (`setup-environment.yml` and `deploy-k8s.yml`) and the `inventory.ini` host configuration.
+   * Implements Prometheus metrics collection (`prom-client`), HTTP liveness/readiness health probes, and load testing.
+   * Builds the verification tooling (`scripts/demo-status.sh`) and leads QA across the full stack.
 
 ---
 
